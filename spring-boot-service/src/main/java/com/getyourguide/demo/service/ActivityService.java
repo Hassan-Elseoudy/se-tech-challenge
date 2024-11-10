@@ -15,8 +15,8 @@ public class ActivityService {
         this.activityRepository = activityRepository;
     }
 
-    public List<Activity> searchActivitiesByTitle(String title) {
-        return activityRepository.findByTitleContainingIgnoreCase(title);
+    public List<Activity> searchActivities(String title) {
+        return activityRepository.searchByTitle(title);
     }
 
     public List<Activity> getAllActivities() {
