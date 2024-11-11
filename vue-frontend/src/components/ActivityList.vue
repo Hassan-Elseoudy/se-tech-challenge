@@ -14,7 +14,10 @@
     <!-- Display the activities -->
     <ul>
       <li v-for="activity in activities" :key="activity.id">
-        {{ activity }}
+        {{ activity.title }} - {{ activity.price }} - {{ activity.currency }} - {{ activity.location }} -
+        {{ activity.rating }} - {{ activity.specialOffer }} - {{ activity.supplierName }} - {{
+          activity.supplierLocation
+        }}
       </li>
     </ul>
   </div>
@@ -37,8 +40,7 @@ export default {
       }
 
       try {
-        const activities = await ActivityService.searchActivities(this.searchQuery);
-        this.activities = activities;
+        this.activities = await ActivityService.searchActivities(this.searchQuery);
       } catch (error) {
         console.error('Error searching activities:', error);
       }
