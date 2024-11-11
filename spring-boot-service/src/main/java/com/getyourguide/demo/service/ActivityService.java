@@ -1,16 +1,11 @@
 package com.getyourguide.demo.service;
 
 import com.getyourguide.demo.dto.ActivityResponse;
-import com.getyourguide.demo.entity.Activity;
 import com.getyourguide.demo.repo.ActivityRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static com.getyourguide.demo.dto.ActivityResponse.toActivityResponse;
 
 @Service
 public class ActivityService {
@@ -21,6 +16,7 @@ public class ActivityService {
         this.activityRepository = activityRepository;
     }
 
+    // TODO: Add pagination to the response, For the lacking time, I could not add pagination to the response.
     public List<ActivityResponse> searchActivities(String title) {
         return activityRepository.searchByTitle(title).stream()
                 .map(ActivityResponse::toActivityResponse)

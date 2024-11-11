@@ -1,16 +1,14 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 
-// Create a new store instance.
+// TODO: for a better state management, we should use the stores, but for now, we will use ad-hoc state management
 const store = createStore({
-    state () {
+    state() {
         return {
             activities: [],
         }
     },
-    actions: {
-    },
-    mutations: {
-    },
+    actions: {},
+    mutations: {},
     getters: {}
 })
 

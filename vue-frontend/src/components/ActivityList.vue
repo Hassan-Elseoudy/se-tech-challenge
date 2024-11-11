@@ -2,7 +2,6 @@
   <div>
     <h1>ActivityList</h1>
 
-    <!-- Search Input -->
     <input
         v-model="searchQuery"
         type="text"
@@ -11,7 +10,6 @@
         class="search-input"
     />
 
-    <!-- Display the activities -->
     <ul>
       <li v-for="activity in activities" :key="activity.id">
         {{ activity.title }} - {{ activity.price }} - {{ activity.currency }} - {{ activity.location }} -
@@ -24,6 +22,7 @@
 </template>
 
 <script>
+
 import {ActivityService} from "../services/activity-service.ts";
 
 export default {
@@ -34,6 +33,7 @@ export default {
     };
   },
   methods: {
+    // TODO: We could start searching after the user has stopped typing for a certain amount of time
     async searchActivities() {
       if (this.searchQuery.trim() === '') {
         return;

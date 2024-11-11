@@ -17,4 +17,6 @@ class GetYourGuideApplicationTests {
     void contextLoads() {
     }
 
+    // TODO: Add more tests, For the lacking time, I could not add more tests, I manually tested the application and it works as expected.
+
 }
