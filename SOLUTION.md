@@ -128,6 +128,13 @@ While this design is optimized for current requirements, future enhancements cou
    implemented.
 4. **Auto-scaling**: Dynamic auto-scaling can be set up for both the backend services and the database to handle
    fluctuating loads.
+5. **Monitoring and Alerting**: Implementing monitoring tools like Prometheus and Grafana can help track system
+   performance and alert on critical issues.
+6. **Security Enhancements**: Implementing security measures like rate limiting, authentication, and authorization can
+   enhance the system's security posture.
+7. **Adding Tests**: Implementing unit tests, integration tests, and load tests can help ensure the system's reliability
+   and performance, there will be a need to add tests to ensure the system's reliability and performance.
+8. **UI is not good xD**: The UI can be improved to provide a more engaging and user-friendly experience.
 
 ---
 
@@ -139,3 +146,7 @@ While this design is optimized for current requirements, future enhancements cou
   assumed data volume.
 - **Database Replication**: We assume a single read replica is sufficient for the expected query volume, with the
   ability to add more replicas if needed.
+
+## Screenshots of output
+
+![output.png](static/output.png)
